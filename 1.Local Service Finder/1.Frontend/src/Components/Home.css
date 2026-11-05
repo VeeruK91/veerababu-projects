@@ -1,0 +1,36 @@
+#home-head{
+    
+    text-align: center;
+  background-clip: text;
+ 
+}
+main {
+  padding-top: 4rem;
+  min-height: calc(100vh - 95px);
+  background: linear-gradient(120deg,rgb(128, 248, 208),rgb(157, 164, 248),rgb(248, 234, 143));
+  padding-bottom: 2rem;
+}
+#para-div1{
+  width:70%;
+  margin: 5rem auto;
+  
+  text-align: center;
+}
+#info-h3{
+  padding-top: 4rem;
+}
+#info-ul{
+  margin-right: 2rem ;
+}
+#info-ul li{
+  padding-top: 1rem;
+}
+footer{
+  text-align: center;
+  padding:1rem;
+  background-color: rgb(178, 127, 255);
+  position: fixed;
+  bottom:0;
+  width: 100%;
+}
+

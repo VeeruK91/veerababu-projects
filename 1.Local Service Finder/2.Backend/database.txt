@@ -1,0 +1,52 @@
+create database webdb2;
+use webdb2;
+CREATE TABLE users_table (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(100) NOT NULL,
+    mobile VARCHAR(20) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    approved TINYINT(1) DEFAULT 0
+);
+CREATE TABLE providers_table (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(100) NOT NULL,
+    mobile VARCHAR(20) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    approved TINYINT(1) DEFAULT 0
+);
+CREATE TABLE provider_services (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    provider_username VARCHAR(50) NOT NULL,
+    service_name VARCHAR(100) NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    description TEXT NOT NULL
+);
+
+CREATE TABLE bookings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_username VARCHAR(50),
+    provider_username VARCHAR(50),
+    service_name VARCHAR(255),
+    price INT
+);
+CREATE TABLE ratings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    provider_username VARCHAR(50),
+    user_username VARCHAR(50),
+    rating INT,
+    feedback TEXT
+);
+CREATE TABLE blocked_providers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) UNIQUE,
+    email VARCHAR(100) UNIQUE,
+    mobile VARCHAR(20) UNIQUE,
+    reason VARCHAR(255)
+);
+Select * from bookings;
+Select * from  ratings  ;
+Select * from blocked_providers;

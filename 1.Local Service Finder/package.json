@@ -1,0 +1,12 @@
+{
+  "name": "2.Local Service Finder",
+  "private": true,
+  "scripts": {
+    "frontend": "cd \"1.Frontend\" && npm run dev",
+    "backend": "cd \"2.Backend\" && python manage.py runserver",
+    "dev-all": "concurrently \"npm run frontend\" \"npm run backend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

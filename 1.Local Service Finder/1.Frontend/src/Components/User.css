@@ -1,0 +1,53 @@
+.rating-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rating-form1 {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  
+}
+
+.rating-form1 select,
+.rating-form1 input,
+.rating-form1 textarea {
+  width: 60%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid gray;
+  margin: 1px auto;
+}
+
+.rating-form1 textarea {
+  height: 100px;
+  resize: none;
+}
+
+.rating-form1 button {
+  width: 150px;
+  padding: 10px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 1px auto;
+}
+
+.rating-form1 button:hover {
+  background: #3e8e41;
+}
+
+.selected-provider {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.selected-provider span {
+  color: darkblue;
+}

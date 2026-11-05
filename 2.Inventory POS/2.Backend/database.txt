@@ -1,0 +1,40 @@
+create database webdb3;
+use webdb3;
+CREATE TABLE users_table (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(100) NOT NULL,
+    mobile VARCHAR(20) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    approved TINYINT(1) DEFAULT 0
+);
+CREATE TABLE staff_table (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(100) NOT NULL,
+    mobile VARCHAR(20) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    approved TINYINT(1) DEFAULT 0
+);
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    stock INT NOT NULL
+);
+
+CREATE TABLE sales (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    staff_username VARCHAR(50),
+    user_username VARCHAR(50),
+    product_id INT,
+    quantity INT,
+    total_price DECIMAL(10,2),
+    sale_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+Select * from users_table;
+Select * from  staff_table  ;
+Select * from  products;
+Select * from  sales;
